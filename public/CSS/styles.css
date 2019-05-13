@@ -1,0 +1,29 @@
+* {
+    font-family: "Avenir Next";
+    background-color: #f9f9f9;
+    font-weight: lighter;
+    display: flex;
+}
+.main {
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    margin: 8px;
+    padding: 8px;
+}
+.partial {
+    background-color: #ffe4e1;
+    font-size: 30px;
+    margin: 8px;
+    padding: 8px;
+}
+form {
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+}
+input {
+    margin: 10px;
+    padding: 4px;
+}
