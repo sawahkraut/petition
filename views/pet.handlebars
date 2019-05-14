@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
     <body>
         <h1>PETITION</h1>
         <p>this petition is for ...</p>
 <div class="main">
         <form action="/subscription" method="post">
-            <input type="text" name="firstName">
-            <input type="text" name="surname">
-            <input type="email" name="email">
-             <canvas id="signature" width="500" height="100"></canvas>
-            <input type="text" name="signature" input="hidden">
+            <input type="text" name="firstName" placeholder="first">
+            <input type="text" name="surname" placeholder="last">
+            <input type="email" name="email" placeholder="email">
+             <canvas id="signature" width="400" height="200"></canvas>
+            <input name="signature" type="hidden" placeholder="signature">
             <button type="submit" name="button">SUBMIT</button>
         </form>
 </div>
     </body>
-</html>
