@@ -1,11 +1,22 @@
 <div class="partial">
+<a href="/"> <i class="fas fa-brain"></i></a>
 
-<h2>This is my navbar</h2>
-<ul>
-    <li>
-         <a href="/registration">Sign Up</a>
-        <a href="/login">Sign In</a>
-        <a href="/editprofile">Your Profile</a>
-    </li>
-</ul>
+    {{#if userloggedin}}
+        <a class="menu">Hi {{first}} </a>&nbsp;|
+        <a class="menu" href="/">Home </a>&nbsp;|
+        <a class="menu" href="/signers">&nbsp;All {{getCount}} Signees</a>&nbsp; |
+        {{#if signed}}
+        <a class="menu" href="/signed">&nbsp;Your Signature</a>&nbsp; |
+        {{else}}
+        <a class="menu" href="/pet">&nbsp;Please Sign</a>&nbsp; |
+        {{/if}}
+        <a class="menu" href="/editprofile">&nbsp;Edit Profile</a>&nbsp; |
+        <a class="menu" href="/logout">Logout </a>&nbsp;|
+    {{else}}
+    <div class="">
+    <a class="menu" href="/login">Login &nbsp; | &nbsp;</a>
+    <a class="menu" href="/registration">Register</a>
+    </div>
+    {{/if}}
+
 </div>

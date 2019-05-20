@@ -1,8 +1,11 @@
-<div class="main">
-
-
-<h1>Thank you, {{first}} for signing!</h1>
+<div class="view">
+<h1>Thank you {{first}} for signing!</h1>
 <img src="{{signature}}" alt="signature">
 
-<a href="/signers">See all {{getCount}} signers!</a>
+<form action="/delete" method="post">
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+<button id="deleteButton" name="button"><i class="far fa-trash-alt fa-5x"></i></button>
+</form>
+
+<a class="menu" href="/signers">See all {{getCount}} signers!</a>
 </div>

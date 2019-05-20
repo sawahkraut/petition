@@ -1,35 +1,252 @@
-* {
-    font-family: "Avenir Next";
-    background-color: #f9f9f9;
-}
 body {
-    display: flex;
-}
-.partial {
-    border: 4px solid black;
-    /* background-color: #ffe4e1; */
-    /* font-size: 30px; */
-    margin: 8px;
-    padding: 8px;
-    z-index: 999999;
+    margin: 0;
+    background-color: #fcd307;
+    font-family: "Avenir Next";
+    /* font-weight: lighter; */
 }
 .main {
-    display: inline-block;
+    font-size: 35px;
+    color: #1c1259;
+}
+
+.menu {
+    font-style: "Avenir Next";
+    text-decoration: none;
+    list-style: none;
+    color: #1c1259;
+    font-size: 30px;
+}
+.view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.partial {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #1c1259;
+    font-weight: lighter;
+    font-size: 30px;
+    /* width: 100%; */
+    padding: 8px;
+}
+h1 {
+    font-family: "Avenir Next";
+    font-weight: lighter;
+}
+#signature {
+    border: 4px dotted #ee4266;
+}
+p {
+    color: #1c1259;
+    margin: 0;
+}
+.text {
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+.fas,
+.fa-brain {
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    color: #1c1259;
+}
+.far,
+.fa-heart {
+    color: #ee4266;
+}
+blockquote {
+    border: 4px #ee4266;
+    padding: 8px;
+    font-size: 25px;
+    border-style: dotted;
+    font-style: italic;
+}
+.handlesWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#handle {
+    font-size: 20px;
+    text-decoration: none;
+    color: #1c1259;
+    margin-bottom: 10px;
+}
+.login {
     position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
+    top: calc(50% - 75px);
+    left: calc(50% - 180px);
+    height: 150px;
+    width: 350px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.login input[type="text"] {
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #1c1259;
+    border-radius: 2px;
+    /* color: #fff; */
+    font-family: "Avenir Next", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.login input[type="password"] {
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #1c1259;
+    border-radius: 2px;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+#button {
+    width: 260px;
+    height: 35px;
+    border-style: dotted;
+    border: 1px solid #ee4266;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #ee4266;
+    background: transparent;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+.login,
+#button:hover {
+    opacity: 0.8;
+}
+.login,
+#button:active {
+    opacity: 0.6;
+}
+
+.login input[type="text"]:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.login input[type="password"]:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.login input[type="button"]:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #1c1259;
+}
+
+::-moz-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+.delete {
+    width: 40px;
+    height: 40px;
+}
+#deleteButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 50px;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+}
+/*
+.view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    width: 100vh;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
     margin: 8px;
     padding: 8px;
 }
-form {
-    display: inline-block;
-    position: relative;
+.container {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    padding: 8px;
+}
+#formOne,
+#formTwo {
+    display: flex;
+    align-items: stretch;
+}
+button {
+    background-color: #7c0a02;
+    color: #f9f9f9;
+    font-size: 14px;
+    width: 13vh;
+    height: 3vh;
+    margin-top: 4vh;
+    margin-left: 1vh;
+}
+.list,
+h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
-input {
-    margin: 10px;
-    padding: 4px;
+ul {
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 100px;
 }
-#signature {
-    border: 2px solid black;
+li {
+    text-decoration: none;
+    list-style: none;
 }
+
+a {
+    display: flex;
+    color: #f8f8ff;
+    text-decoration: none;
+    padding: 6px;
+}
+h1,
+h3 {
+    color: #7c0a02;
+}
+h2 {
+    color: #f9f9f9;
+    font-size: 30px;
+    margin-left: 8px;
+}
+p {
+    margin-left: 8px;
+    font-size: 20px;
+}
+.image {
+    height: 500px;
+    width: 400px;
+}   */

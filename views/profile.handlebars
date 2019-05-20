@@ -1,8 +1,11 @@
-<h1>Profile</h1>
-<form method="post">
+<div class="view">
+
+    <h1>Profile &nbsp; &nbsp;<i class="far fa-heart"></i></h1>
+<form class="login" method="post">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
     <input name="age" type="text" placeholder="age">
     <input name="city" type="text" placeholder="city">
     <input name="url" type="text" placeholder="Website">
-    <button>Submit</button>
+    <button id="button">Submit</button>
 </form>
+</div>

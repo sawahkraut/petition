@@ -1,12 +1,12 @@
-    <body>
-        <h1>PETITION</h1>
-        <p>this petition is for ...</p>
-<div class="main">
-        <form action="/subscription" method="post">
+<body>
+    <div class="view">
+        <h1>Sign here! &nbsp; &nbsp;<i class="far fa-heart"></i></h1>
+
+        <form class="login" action="/subscription" method="post">
             <input type="hidden" name="_csrf" value="{{csrfToken}}">
-             <canvas id="signature" width="400" height="200"></canvas>
+             <canvas id="signature" width="500" height="300"></canvas>
             <input name="signature" type="hidden" placeholder="signature">
-            <button type="submit" name="button">SUBMIT</button>
+            <button id="button" type="submit" name="button">SUBMIT</button>
         </form>
-</div>
-    </body>
+    </div>
+</body>

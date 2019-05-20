@@ -35,7 +35,7 @@ module.exports.getUser = function getUser(first, last, email, password) {
     return db.query(
         `INSERT INTO users (first, last, email, password)
     VALUES ($1, $2, $3, $4)
-    RETURNING id, email;
+    RETURNING first, id, email;
     `,
         [first, last, email, password]
     );
@@ -61,26 +61,26 @@ module.exports.profile = function profile(uid, age, city, url) {
     );
 };
 
-// ############################ EDIT + UPDATE USER PROFILE ############################ //
+// ############################ edit + update user profile ############################ //
 
-module.exports.editProfile = function editProfile(email) {
+module.exports.editProfile = function editProfile(userid) {
     return db.query(
         `SELECT email, password, city, age, url, first, last, signatures.signature, users.id AS user_id, signatures.id AS "signID"
         FROM users
         LEFT JOIN signatures ON users.id = signatures.user_id
         LEFT JOIN user_profiles ON users.id = user_profiles.user_id
-        WHERE email = $1
+        WHERE users.id = $1
          `,
-        [email]
+        [userid]
     );
 };
 
-module.exports.updateUser = function updateUser(first, last, email, id) {
+module.exports.updateUser = function updateUser(id, first, last, email) {
     return db.query(
-        `UPDATE users SET first=$1, last=$2, email=$3
-        WHERE id=$4;
+        `UPDATE users SET first=$2, last=$3, email=$4
+        WHERE id=$1;
         `,
-        [first, last, email, id]
+        [id, first, last, email]
     );
 };
 
@@ -91,7 +91,7 @@ module.exports.upsertUserProfile = function upsertUserProfile(
     uid
 ) {
     return db.query(
-        `INSERT INTO user_profiles (age, city, url, uid)
+        `INSERT INTO user_profiles (age, city, url, user_id)
         VALUES ($1, $2, $3, $4)
         ON CONFLICT (user_id)
         DO UPDATE SET age = $1, city = $2, url = $3
@@ -109,4 +109,10 @@ module.exports.updatePassword = function updatePassword(hashPass, id) {
         `,
         [hashPass, id]
     );
+};
+
+// ############################ delete signature ############################ //
+
+module.exports.removeSign = function removeSign(id) {
+    return db.query(`DELETE FROM signatures WHERE user_id=$1`, [id]);
 };

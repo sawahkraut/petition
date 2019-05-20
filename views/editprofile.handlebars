@@ -1,14 +1,18 @@
+<div class="view">
 <h1>Edit Your Profile</h1>
-{{#data}}
-<form method="post">
-    <input name="first" type="text" value="{{first}}">
-    <input name="last" type="text" value="{{last}}">
-    <input name="email" type="email" value="{{email}}">
-    <input name="age" type="text" value="{{age}}">
-    <input name="city" type="text" value="{{city}}">
-    <input name="url" type="text" value="{{url}}">
-    <input name="password" type="password" value="">
-    <input type="hidden" name="_csrf" value="{{csrfToken}}">
-    <button>Update</button>
-</form>
-{{/data}}
+
+    <form class="login" method="post">
+
+
+        <input  type="text" value="{{data.first}}">
+        <input type="text" value="{{data.last}}">
+        <input  type="text" value="{{data.email}}">
+
+        <input type="text" value="{{data.age}}">
+        <input  type="text" value="{{data.city}}">
+        <input  type="text" value="{{data.url}}">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <input  type="password" value="" placeholder="password">
+        <button id="button">Update</button>
+    </form>
+</div>

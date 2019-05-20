@@ -1,8 +1,10 @@
-<h1>Login</h1>
+<div class="view">
+<h1>Login &nbsp; &nbsp;<i class="far fa-heart"></i></h1>
 
-<form method="post">
-    <input name="email" type="email" placeholder="email">
+<form class="login" method="post">
+    <input name="email" type="text" placeholder="email">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
     <input name="password" type="password" placeholder="password">
-    <button>Submit</button>
+    <button id="button">Submit</button>
 </form>
+</div>
