@@ -12,7 +12,7 @@ Technologies/packages used: Handlebars, Express, Node, Postgres, Heroku.
 
 [Heroku Version: https://sawahkraut.herokuapp.com/](https://sawahkraut.herokuapp.com/)
 
-### Screenshots of the project
+### Project Schreenshots
 
 ![Screenshot](/screenshots/Screenshot1.png?raw=true "Screenshot 1")
 
